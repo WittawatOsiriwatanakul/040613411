@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text{
+            color: green;
+        }
+    </style>
+    <script>
+        function color(x){
+            var input=document.getElementById(x);
+            if(input.value!=""){
+                input.classList.add('text');
+            }
+            else{
+                input.classList.remove('text');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        Name:<input type="text" id="name" oninput="color('name')">
+        <br>
+        Age:<input type="text" id="age" oninput="color('age')">
+        <br>
+        Birthdate:<input type="text" id="birthdate" oninput="color('birthdate')">
+    </form>
+</body>
+</html>
